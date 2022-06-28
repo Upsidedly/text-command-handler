@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { Client, ClientEvents, ClientOptions, Collection, MessageEmbed, Snowflake } from 'discord.js'
-import { readdir } from 'fs/promises'
+import { readdir } from 'fs-extra'
 import config from '../hellshire.config.js'
 import { Event } from './event.js'
 import { TextCommand } from './textcommand.js'
