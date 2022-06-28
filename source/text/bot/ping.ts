@@ -6,6 +6,7 @@ export default new TextCommand({
     name: 'ping',
     aliases: ['pong'],
     description: 'Pong!',
+    categories: ['bot'],
     fn: async (client, message) => {
         const embed = new MessageEmbed({
             title: 'Pong!',
