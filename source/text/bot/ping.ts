@@ -1,5 +1,6 @@
 import { TextCommand } from '../../classes/textcommand.js'
 import { MessageEmbed } from 'discord.js'
+import ms from 'ms'
 
 export default new TextCommand({
     name: 'ping',
@@ -11,11 +12,15 @@ export default new TextCommand({
             fields: [
                 {
                     name: 'Latency',
-                    value: `${Date.now() - message.createdTimestamp}ms`
+                    value: `\`${Date.now() - message.createdTimestamp}ms\``
                 },
                 {
                     name: 'API Latency',
                     value: `\`${Math.round(client.ws.ping)}ms\``
+                },
+                {
+                    name: 'Uptime',
+                    value: `${ms(client.sinceLogin())}`
                 }
             ]
         })
